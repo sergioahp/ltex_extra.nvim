@@ -55,7 +55,7 @@ function M.catch_ltex()
         name = "ltex",
     })
     if not next(buf_clients) then
-    ok, buf_clients = pcall(client_getter, {
+    buf_clients = client_getter({
         bufnr = vim.api.nvim_get_current_buf(),
         name = "ltex_plus",
     })
